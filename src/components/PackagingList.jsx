@@ -2,8 +2,8 @@ import React from 'react'
 
 const PackagingList = () => {
   return (
-    <div>
-      
+    <div className="list">
+      LIST
     </div>
   )
 }
