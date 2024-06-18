@@ -7,12 +7,13 @@ import Stats from './components/Stats'
 
 const App = () => {
   return (
-    <>
+    <div className='app'>
         <Logo/>
         <Form/>
         <PackagingList/>
         <Stats/>
-    </>
+    </div>
+    
   )
 }
 
