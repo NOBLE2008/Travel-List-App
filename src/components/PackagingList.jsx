@@ -1,5 +1,3 @@
-import React from 'react'
-
 const PackagingList = () => {
   return (
     <div className="list">
