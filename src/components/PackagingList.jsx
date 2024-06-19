@@ -1,9 +1,5 @@
 const PackagingList = () => {
-  return (
-    <div className="list">
-      LIST
-    </div>
-  )
-}
+  return <div className="list">LIST</div>;
+};
 
-export default PackagingList
+export default PackagingList;
