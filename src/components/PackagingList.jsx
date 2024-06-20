@@ -8,12 +8,13 @@ const initialItems = [
   { id: 5, description: "Pants", quantity: 1, packed: false },
 ];
 
+const render = (item, i) => (
+  <Item item={item} key={i}/> 
+)
 const PackagingList = () => {
   return <div className="list">
     <ul>
-      {initialItems.map((item, i) => (
-        <Item item={item} key={i}/> 
-      ))}
+      {initialItems.map()}
     </ul>
   </div>;
 };
