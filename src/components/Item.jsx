@@ -1,5 +1,9 @@
 const Item = (props) => {
-  return <h1>{props.description}</h1>;
+  return <li>
+    <span>
+    {props.item.description}
+  </span>
+    </li>
 };
 
 export default Item;
