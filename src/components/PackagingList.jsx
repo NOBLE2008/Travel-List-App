@@ -14,7 +14,7 @@ const render = (item, i) => (
 const PackagingList = () => {
   return <div className="list">
     <ul>
-      {initialItems.map()}
+      {initialItems.map(render)}
     </ul>
   </div>;
 };
