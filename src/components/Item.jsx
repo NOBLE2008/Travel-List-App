@@ -1,7 +1,7 @@
 const Item = (props) => {
   return <li>
     <span>
-    {props.item.description}
+    <input type="checkbox" />{props.item.description} ❌
   </span>
     </li>
 };
