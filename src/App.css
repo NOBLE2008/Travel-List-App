@@ -77,6 +77,10 @@ input {
   background-color: #76c7ad;
 }
 
+pre{
+  display: inline;
+}
+
 .list {
   background-color: #5a3e2b;
   color: #ffebb3;
