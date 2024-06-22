@@ -1,5 +1,4 @@
 import { useState } from "react";
-import Item from "./Item";
 
 const PackagingList = () => {
   const [initialItems, setInitial] = useState([
@@ -9,12 +8,9 @@ const PackagingList = () => {
     { id: 4, description: "Shirts", quantity: 1, packed: false },
     { id: 5, description: "Pants", quantity: 1, packed: false },
   ]);
-  const del = (num) => {
-    return setInitial((item) => {
-      return item.filter((num) => item.id !== num);
-    });
+  const render = (item, i) => {
+
   };
-  const render = (item, i) => <Item item={item} key={i} setInitial={del} />;
   return (
     <div className="list">
       <ul>{initialItems.map(render)}</ul>
