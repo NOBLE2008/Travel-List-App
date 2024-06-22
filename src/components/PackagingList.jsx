@@ -1,12 +1,10 @@
-import { useState } from "react";
-
-const PackagingList = () => {
-  const [initialItems, setInitial] = useState([]);
+import React from "react";
+const PackagingList = (props) => {
   
 
   const del = (num) => {
     return () => {
-      return setInitial((item) => {
+      return props.setInitial((item) => {
         return item.filter((ite) => ite.id!== num);
       });
     }
@@ -27,7 +25,7 @@ const PackagingList = () => {
 
   return (
     <div className="list">
-      <ul>{initialItems.map(render)}</ul>
+      <ul>{props.initialItems.map(render)}</ul>
     </div>
   );
 };
