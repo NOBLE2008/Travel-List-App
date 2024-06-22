@@ -9,7 +9,11 @@ const PackagingList = () => {
     { id: 5, description: "Pants", quantity: 1, packed: false },
   ]);
   const render = (item, i) => {
-
+    <li>
+    <span>
+    <input type="checkbox" />{item.description} <pre>❌</pre>
+  </span>
+    </li>
   };
   return (
     <div className="list">
