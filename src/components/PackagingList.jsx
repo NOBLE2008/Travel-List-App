@@ -11,7 +11,7 @@ const PackagingList = () => {
       });
     }
   };
-  const render = (item, num) => (
+  const render = (item) => (
     <li>
       <span>
         <input type="checkbox" />
