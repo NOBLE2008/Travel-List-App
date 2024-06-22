@@ -19,6 +19,7 @@ const PackagingList = (props) => {
         >
           ❌
         </pre>
+        {item.quantity}
       </span>
     </li>
   );
