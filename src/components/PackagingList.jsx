@@ -1,25 +1,18 @@
 import React from "react";
 const PackagingList = (props) => {
-  
-
   const del = (num) => {
     return () => {
       return props.setInitial((item) => {
-        return item.filter((ite) => ite.id!== num);
+        return item.filter((ite) => ite.id !== num);
       });
-    }
+    };
   };
   const render = (item) => (
     <li>
       <span>
         <input type="checkbox" />
-        {item.description}{" "} {item.quantity}
-        <pre
-          onClick={del(item.id)}
-        >
-          ❌
-        </pre>
-        
+        {item.description} {item.quantity}
+        <pre onClick={del(item.id)}>❌</pre>
       </span>
     </li>
   );
