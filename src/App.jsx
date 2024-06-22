@@ -11,7 +11,7 @@ const App = () => {
   return (
     <div className="app">
       <Logo />
-      <Form />
+      <Form setInitial={setInitial}/>
       <PackagingList initialItems={initialItems} setInitial={setInitial}/>
       <Stats />
     </div>
