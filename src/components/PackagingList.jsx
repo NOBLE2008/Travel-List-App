@@ -13,13 +13,13 @@ const PackagingList = (props) => {
     <li>
       <span>
         <input type="checkbox" />
-        {item.description}{" "}
+        {item.description}{" "} {item.quantity}
         <pre
           onClick={del(item.id)}
         >
           ❌
         </pre>
-        {item.quantity}
+        
       </span>
     </li>
   );
