@@ -45,7 +45,7 @@ const Form = ({setInitial}) => {
         <option value="9">9</option>
         <option value="10">10</option>
       </select>
-      <input type="text" placeholder="Item..." value={newItem.description} onChange={handleChange}/>
+      <input type="text" placeholder="Item..." value={newItem.description} name="description" onChange={handleChange}/>
       <button type="submit">Add</button>
     </form>
   );
