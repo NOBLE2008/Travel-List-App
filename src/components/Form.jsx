@@ -21,7 +21,10 @@ const Form = ({setInitial}) => {
     setInitial((item) => {
       return [
         ...item,
-        newItem
+        {
+         ...newItem,
+          id: Date.now()
+        }
       ];
     });
     setItem({
