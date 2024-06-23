@@ -8,8 +8,8 @@ const PackagingList = (props) => {
       });
     };
   };
-  const render = (item) => (
-    <List item={item} del={del}/>
+  const render = (item, i) => (
+    <List item={item} del={del} key={i}/>
   );
 
   return (
