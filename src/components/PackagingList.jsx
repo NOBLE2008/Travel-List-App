@@ -1,4 +1,5 @@
 import React from "react";
+import List from "./List";
 const PackagingList = (props) => {
   const del = (num) => {
     return () => {
@@ -8,13 +9,7 @@ const PackagingList = (props) => {
     };
   };
   const render = (item) => (
-    <li>
-      <span>
-        <input type="checkbox" />
-        {item.description} {item.quantity}
-        <pre onClick={del(item.id)} className="del">❌</pre>
-      </span>
-    </li>
+    <List item={item} del={del}/>
   );
 
   return (
