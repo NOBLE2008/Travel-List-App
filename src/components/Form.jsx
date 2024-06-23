@@ -1,15 +1,19 @@
 import React, { useState } from "react";
 
 const Form = ({setInitial}) => {
-  const [description, setDescription] = useState('');
-  const [quantity, setQuantity] = useState(1);
+  const [newItem, setItem] = useState({
+    description: undefined,
+    quantity: 1,
+    packed: false,
+  });
 
-  const handleDescription = (e) => {
-    setDescription(e.target.value);
-  }
-
-  const handleQuantity = (e) => {
-    setQuantity(e.target.value);
+  const handleChange = (e) => {
+    setItem((item) => {
+      return {
+        ...item,
+        [e.target.name]: e.target.value
+      }
+    });
   }
 
   const handleSubmit = (e) => {
@@ -29,7 +33,7 @@ const Form = ({setInitial}) => {
   return (
     <form className="add-form" onSubmit={handleSubmit}>
       <h3>What do you need for your trip?</h3>
-      <select onChange={handleQuantity} value={quantity}>
+      <select onChange={handleChange} value={newItem.quantity}>
         <option value="1">1</option>
         <option value="2">2</option>
         <option value="3">3</option>
@@ -41,7 +45,7 @@ const Form = ({setInitial}) => {
         <option value="9">9</option>
         <option value="10">10</option>
       </select>
-      <input type="text" placeholder="Item..." value={description} onChange={handleDescription}/>
+      <input type="text" placeholder="Item..." value={newItem.description} onChange={handleChange}/>
       <button type="submit">Add</button>
     </form>
   );
