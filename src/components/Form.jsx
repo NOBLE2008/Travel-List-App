@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 const Form = ({setInitial}) => {
   const [newItem, setItem] = useState({
-    description: undefined,
+    description: '',
     quantity: 1,
     packed: false,
   });
@@ -23,6 +23,11 @@ const Form = ({setInitial}) => {
         ...item,
         newItem
       ];
+    });
+    setItem({
+      description: '',
+      quantity: 1,
+      packed: false,
     });
   };
   return (
