@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const Form = (props) => {
+const Form = ({setInitial}) => {
   const [description, setDescription] = useState('');
   const [quantity, setQuantity] = useState(1);
 
@@ -14,7 +14,7 @@ const Form = (props) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    props.setInitial((item) => {
+    setInitial((item) => {
       return [
         ...item,
         {
