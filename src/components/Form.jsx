@@ -21,12 +21,7 @@ const Form = ({setInitial}) => {
     setInitial((item) => {
       return [
         ...item,
-        {
-          id: Date.now(),
-          description: description,
-          quantity: quantity,
-          packed: false,
-        },
+        newItem
       ];
     });
   };
