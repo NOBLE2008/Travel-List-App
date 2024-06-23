@@ -33,7 +33,7 @@ const Form = ({setInitial}) => {
   return (
     <form className="add-form" onSubmit={handleSubmit}>
       <h3>What do you need for your trip?</h3>
-      <select onChange={handleChange} value={newItem.quantity}>
+      <select onChange={handleChange} value={newItem.quantity} name="quantity">
         <option value="1">1</option>
         <option value="2">2</option>
         <option value="3">3</option>
