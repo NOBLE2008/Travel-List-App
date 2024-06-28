@@ -8,6 +8,10 @@
   display: none;
 }
 
+p{
+  display: inline;
+}
+
 .line{
   text-decoration: line-through;
 }
