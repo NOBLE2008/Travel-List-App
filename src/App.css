@@ -8,11 +8,11 @@
   display: none;
 }
 
-p{
+p {
   display: inline;
 }
 
-.line{
+.line {
   text-decoration: line-through;
 }
 
@@ -85,12 +85,12 @@ input {
   background-color: #76c7ad;
 }
 
-pre{
+pre {
   display: inline;
 }
 
-.del{
-  cursor: url('./trash3.svg'), auto;
+.del {
+  cursor: url("./trash3.svg"), auto;
 }
 
 .list {
@@ -125,8 +125,6 @@ pre{
   justify-content: center;
   align-content: start;
 }
-
-
 
 .list li {
   display: flex;

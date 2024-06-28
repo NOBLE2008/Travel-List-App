@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 
-const Form = ({setInitial}) => {
+const Form = ({ setInitial }) => {
   const [newItem, setItem] = useState({
-    description: '',
+    description: "",
     quantity: 1,
     packed: false,
   });
@@ -11,10 +11,10 @@ const Form = ({setInitial}) => {
     setItem((item) => {
       return {
         ...item,
-        [e.target.name]: e.target.value
-      }
+        [e.target.name]: e.target.value,
+      };
     });
-  }
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -22,13 +22,13 @@ const Form = ({setInitial}) => {
       return [
         ...item,
         {
-         ...newItem,
-          id: Date.now()
-        }
+          ...newItem,
+          id: Date.now(),
+        },
       ];
     });
     setItem({
-      description: '',
+      description: "",
       quantity: 1,
       packed: false,
     });
@@ -48,7 +48,13 @@ const Form = ({setInitial}) => {
         <option value="9">9</option>
         <option value="10">10</option>
       </select>
-      <input type="text" placeholder="Item..." value={newItem.description} name="description" onChange={handleChange}/>
+      <input
+        type="text"
+        placeholder="Item..."
+        value={newItem.description}
+        name="description"
+        onChange={handleChange}
+      />
       <button type="submit">Add</button>
     </form>
   );
