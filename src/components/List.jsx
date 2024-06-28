@@ -5,8 +5,8 @@ const List = ({item, del, update}) => {
   <li>
     <span>
       <input type="checkbox" onChange={update(item.id)}/>
-      <p>{item.description} {item.quantity}</p>
-      <pre onClick={del(item.id)} className={`del ${item.packed ? 'line': ''}`}>❌</pre>
+      <p className={`${item.packed ? 'line': ''}`}>{item.description} {item.quantity}</p>
+      <pre onClick={del(item.id)} className={`del`}>❌</pre>
     </span>
   </li>
   )
