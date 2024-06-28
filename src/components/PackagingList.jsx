@@ -8,6 +8,18 @@ const PackagingList = (props) => {
       });
     };
   };
+  const update = (num) => {
+    return () => {
+      return props.setInitial((item) => {
+        return item.map((ite) => {
+          if (num === ite.id) {
+            return {...ite, packed:!ite.packed };
+          }
+          return ite;
+        });
+      });
+    };
+  }
   const render = (item, i) => (
     <List item={item} del={del} key={i}/>
   );
