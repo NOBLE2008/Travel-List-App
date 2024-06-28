@@ -1,10 +1,10 @@
 import React from 'react'
 
-const List = ({item, del}) => {
+const List = ({item, del, update}) => {
   return (
   <li>
     <span>
-      <input type="checkbox" />
+      <input type="checkbox"/>
       {item.description} {item.quantity}
       <pre onClick={del(item.id)} className="del">❌</pre>
     </span>
