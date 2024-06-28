@@ -4,7 +4,7 @@ const List = ({item, del, update}) => {
   return (
   <li>
     <span>
-      <input type="checkbox"/>
+      <input type="checkbox" onChange={update(item.id)}/>
       {item.description} {item.quantity}
       <pre onClick={del(item.id)} className="del">❌</pre>
     </span>
