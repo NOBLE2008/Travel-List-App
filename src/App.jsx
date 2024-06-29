@@ -13,7 +13,7 @@ const App = () => {
       <Logo />
       <Form setInitial={setInitial}/>
       <PackagingList initialItems={initialItems} setInitial={setInitial}/>
-      <Stats />
+      <Stats items={initialItems}/>
     </div>
   );
 };
