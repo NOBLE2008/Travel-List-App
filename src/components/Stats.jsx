@@ -1,4 +1,4 @@
-const Stats = ({items}) => {
+const Stats = ({ items }) => {
   const numItems = items.length;
   return (
     <footer>
