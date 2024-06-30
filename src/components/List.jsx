@@ -4,7 +4,7 @@ const List = ({ item, del, update }) => {
   return (
     <li>
       <span>
-        <input type="checkbox" onChange={update(item.id)}/>
+        <input type="checkbox" onChange={update(item.id)} checked={item.packed}/>
         <p className={`${item.packed ? "line" : ""}`}>
           {item.description} {item.quantity}
         </p>
