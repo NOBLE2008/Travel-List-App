@@ -29,9 +29,9 @@ const PackagingList = (props) => {
       <ul>{props.initialItems.map(render)}</ul>
       <div className="actions">
         <select>
-          <option value="input"></option>
-          <option value="description"></option>
-          <option value="packed"></option>
+          <option value="input">Sort by input order</option>
+          <option value="description">Sort by description</option>
+          <option value="packed">Sort by packed status</option>
         </select>
       </div>
     </div>
