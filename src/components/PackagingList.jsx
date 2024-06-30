@@ -28,7 +28,9 @@ const PackagingList = (props) => {
     <div className="list">
       <ul>{props.initialItems.map(render)}</ul>
       <div className="actions">
-        <select></select>
+        <select>
+          
+        </select>
       </div>
     </div>
   );
