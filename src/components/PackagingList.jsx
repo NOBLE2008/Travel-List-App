@@ -29,6 +29,12 @@ const PackagingList = (props) => {
       });
     };
   };
+
+  const delAll = () => {
+    return () => {
+      return props.setInitial([])
+    }
+  }
   const render = (item, i) => (
     <List item={item} del={del} key={i} update={update} />
   );
@@ -42,6 +48,7 @@ const PackagingList = (props) => {
           <option value="description">Sort by description</option>
           <option value="packed">Sort by packed status</option>
         </select>
+        <button onClick={delAll()}>Clear All</button>
       </div>
     </div>
   );
