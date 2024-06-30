@@ -1,7 +1,15 @@
 import React, { useState } from "react";
 import List from "./List";
 const PackagingList = (props) => {
-  const [order, setOrder] = useState('input')
+  const [order, setOrder] = useState("input");
+
+  let sortItems;
+  if (order === "input") sortItems = props.initialItems;
+  if (order === "description")
+    sortItems = props.initialItems
+      .slice()
+      .sort((a, b) => a.description.localeCompare(b.description));
+  if(order === 'packed') sortItems = props.initialItems.slice().sort((a, b) => Number(a.packed) - Number(b.packed));
   const del = (num) => {
     return () => {
       return props.setInitial((item) => {
@@ -27,9 +35,9 @@ const PackagingList = (props) => {
 
   return (
     <div className="list">
-      <ul>{props.initialItems.map(render)}</ul>
+      <ul>{sortItems.map(render)}</ul>
       <div className="actions">
-        <select value={order} onClick={e => setOrder(e.target.value)}>
+        <select value={order} onChange={(e) => setOrder(e.target.value)}>
           <option value="input">Sort by input order</option>
           <option value="description">Sort by description</option>
           <option value="packed">Sort by packed status</option>
