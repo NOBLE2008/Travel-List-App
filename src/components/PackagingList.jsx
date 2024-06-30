@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import List from "./List";
 const PackagingList = (props) => {
-  const [order, setOrder] = useState([])
+  const [order, setOrder] = useState('input')
   const del = (num) => {
     return () => {
       return props.setInitial((item) => {
@@ -29,7 +29,7 @@ const PackagingList = (props) => {
     <div className="list">
       <ul>{props.initialItems.map(render)}</ul>
       <div className="actions">
-        <select>
+        <select value={order} onClick={e => setOrder(e.target.value)}>
           <option value="input">Sort by input order</option>
           <option value="description">Sort by description</option>
           <option value="packed">Sort by packed status</option>
